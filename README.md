@@ -8,14 +8,14 @@ This scraper uses scrapy,[CLD-2](https://pypi.org/project/cld2-cffi/), [datepars
 - Run `pip install scrapy`,`pip install cld2-cffi`, `pip install dateparser`, and `pip install html2text` from the virtualenv to install all the dependencies
 ## Running the Scraper on Windows
 While inside the virtualenv `cd` into the directory that contains `powershell_script.ps1` and run `.\powershell_script.ps1` while passing allowed arguments, from powershell terminal to run the script. For example, running `.\powershell_script.ps1 cdc` will fetch covid-19 related posts from the CDC website. The list of allowed options can be found in the bottom of this document.
-## Running the Scraper on Mac/Linux (NOT SUPPORTED YET)
-While inside the virtualenv `cd` into the root directory that contains `unix_script.sh` and run `bash unix_script.sh` from terminal to run the script
+## Running the Scraper on Mac/Linux
+While inside the virtualenv `cd` into the directory that contains `unix_script.sh` and run `bash unix_script.sh` while passing allowed arguments, from shell terminal to run the script. For example, running `bash unix_script.sh cdc` will fetch covid-19 related posts from the CDC website. The list of allowed options can be found in the bottom of this document.
 
 ## Accessing the data
 The scraped posts are saved in `posts` directory in the format `{title,source,date,url,scraped,classes,country,municipality,language,text}` for each post. The links to each update are saved in `links` directory.
 
 ## List of allowed shell arguments: 
-- CDC
+- [CDC](https://www.cdc.gov/coronavirus/2019-ncov/whats-new-all.html)
 
 **Note:** Since all the passed arguments are converted into lowercase, casing doesn't matter when you are passing it in the shell. For example: `.\powershell_script.ps1 cDc` would work the same way as `.\powershell_script.ps1 CDC`
 
