@@ -1,5 +1,5 @@
 if (!($args.Length -eq 1)) {
-    Write-Host("Uh-Oh! The number of arguments passed to the scrpt should be 1.")
+    Write-Host("Uh-Oh! The number of arguments passed to the script should be 1.")
 }
 elseif ($args -eq "cdc".ToLower()) {
     scrapy crawl cdc_links
