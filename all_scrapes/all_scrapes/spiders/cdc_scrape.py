@@ -23,7 +23,7 @@ class PostsSpider(scrapy.Spider):
         date = response.css('span#last-reviewed-date::text').get() if '/travel/notices/warning/coronavirus-cruise-ship' not in url else response.css(
             '.last-reviewed.col > div:nth-of-type(1) > span::text').get()
         updatedDate = dateparser.parse(date, languages=['en', 'es']).date()
-        title = response.css('title::text').get() 
+        title = response.css('title::text').get()
         text = converter.handle(syndicateContent)
         isReliable, textBytesFound, details = cld2.detect(text)
         language = details[0].language_name
