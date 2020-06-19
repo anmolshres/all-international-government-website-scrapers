@@ -12,7 +12,7 @@ While inside the virtualenv `cd` into the directory that contains `powershell_sc
 While inside the virtualenv `cd` into the directory that contains `unix_script.sh` and run `bash unix_script.sh` while passing allowed arguments, from shell terminal to run the script. For example, running `bash unix_script.sh cdc` will fetch covid-19 related posts from the CDC website. The list of allowed options can be found in the bottom of this document.
 
 ## Accessing the data
-The scraped posts are saved in `posts` directory in the format `{title,source,date,url,scraped,classes,country,municipality,language,text}` for each post. The links to each update are saved in `links` directory.
+The scraped posts are saved in `posts` directory in the format `{title,source,published,url,scraped,classes,country,municipality,language,text}` for each post. The links to each update are saved in `links` directory.
 
 ## List of allowed shell arguments: 
 - [CDC](https://www.cdc.gov/coronavirus/2019-ncov/whats-new-all.html)

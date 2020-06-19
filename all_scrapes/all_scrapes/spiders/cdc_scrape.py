@@ -30,7 +30,7 @@ class PostsSpider(scrapy.Spider):
         yield{
             'title': title,
             'source': 'Centers for Disease Control and Prevention',
-            'date': updatedDate,
+            'published': updatedDate,
             'url': url,
             'scraped': datetimeToday,
             'classes': ['Government'],
