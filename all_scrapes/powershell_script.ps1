@@ -5,6 +5,10 @@ elseif ($args -eq "cdc".ToLower()) {
     scrapy crawl cdc_links
     scrapy crawl cdc_posts -o posts/cdc_posts.json
 }
+elseif ($args -eq "brazil".ToLower()) {
+    scrapy crawl brazil_links
+    scrapy crawl brazil_posts -o posts/brazil_posts.json
+}
 else {
     Write-Host("Uh-Oh! Sorry, that region does not have any script for it. `nCheck README for all available options.")
 }
