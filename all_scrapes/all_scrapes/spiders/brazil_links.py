@@ -13,7 +13,7 @@ class LinksSpider(scrapy.Spider):
         links = response.css(
             'div.span9.tileContent > h2 > a::attr(href)').getall()
         linksAfter2019 = filter(
-            lambda link: '/noticias/svs/15676-instituto-evandro-chagas-completa-78-anos-e-novo-diretor-toma-posse' not in link, links)
+            lambda link: '/noticias/svs/15676-instituto-evandro-chagas-completa-78-anos-e-novo-diretor-toma-posse' not in link and '/47024-ministerio-da-saude-divulgara-dados-de-covid-19-em-plataforma-interativa' not in link, links)
         os.chdir('./links/')
         filename = 'all_brazil_links.txt'
         with open(filename, 'w') as f:
