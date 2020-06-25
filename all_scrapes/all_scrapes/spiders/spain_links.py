@@ -11,11 +11,12 @@ class LinksSpider(scrapy.Spider):
     def parse(self, response):
         links = response.css('.col-sm-8.col-md-9.informacion > p > a::attr(href)').getall()
         masterLinks = filter(lambda link: link.startswith('cargarNotas.do'),links)
+        masterLinksCopy = list(masterLinks).copy()
+        lengthOfLinks = len(masterLinksCopy)
         subLinks = filter(lambda link: link.startswith('cargarNotas.do') == False,links)
-        writeToFile(response,list(masterLinks),list(subLinks))
+        writeToFile(response,masterLinksCopy,list(subLinks))
         self.counter+=1
-        if self.counter < len(list(masterLinks)):
-            print(str(self.counter)+'+'+str(len(links)))
+        if self.counter < lengthOfLinks:
             next_page = response.urljoin(links[self.counter])
             yield scrapy.Request(next_page,callback=self.parse)
 
