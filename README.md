@@ -17,6 +17,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 ## List of allowed shell arguments: 
 - [CDC](https://www.cdc.gov/coronavirus/2019-ncov/whats-new-all.html)
 - [Brazil](https://www.saude.gov.br/noticias?filter-search=coronavirus&limit=0&filter-start_date=&filter-end_date=&filter_order=&filter_order_Dir=&limitstart=&task=)
+- [Spain](https://www.mscbs.gob.es/profesionales/cargarNotas.do?time=1577833200000)
 
 **Note:** Since all the passed arguments are converted into lowercase, casing doesn't matter when you are passing it in the shell. For example: `.\powershell_script.ps1 cDc` would work the same way as `.\powershell_script.ps1 CDC`
 
