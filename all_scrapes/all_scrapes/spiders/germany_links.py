@@ -17,6 +17,7 @@ class LinksSpider(scrapy.Spider):
         if (response.url).endswith('page=0'):
             linksToWrite = filter(lambda link: 'https://www.bundesregierung.de/breg-de/themen/coronavirus\\' != link, linksToWrite)
             self.maxPage = int(maxPageString) - 1
+        linksToWrite = map(lambda link: link[:-1],linksToWrite)
         writeToFile(response,linksToWrite,str(self.maxPage))
         self.counter+=1
         if self.counter <= self.maxPage:
