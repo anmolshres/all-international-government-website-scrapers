@@ -15,6 +15,9 @@ elif [ "${1,,}" == "uk" ]; then
 elif [ "${1,,}" == "italy" ]; then
     scrapy crawl italy_links
     scrapy crawl italy_posts -o posts/italy_posts.json
+elif [ "${1,,}" == "germany" ]; then
+    scrapy crawl germany_links
+    scrapy crawl germany_posts -o posts/germany_posts.json
 else
     printf "Uh-Oh! Sorry, that region does not have any script for it. \nCheck README for all available options.\n"
 fi
