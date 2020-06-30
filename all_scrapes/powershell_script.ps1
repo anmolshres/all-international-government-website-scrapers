@@ -29,6 +29,15 @@ elseif ($args -eq "peru".ToLower()) {
     scrapy crawl peru_links
     scrapy crawl peru_posts -o posts/peru_posts.json
 }
+elseif ($args -eq "all".ToLower()) {
+    .\powershell_script.ps1 cdc
+    .\powershell_script.ps1 brazil
+    .\powershell_script.ps1 spain
+    .\powershell_script.ps1 uk
+    .\powershell_script.ps1 italy
+    .\powershell_script.ps1 germany
+    .\powershell_script.ps1 peru
+}
 else {
     Write-Host("Uh-Oh! Sorry, that region does not have any script for it. `nCheck README for all available options.")
 }
