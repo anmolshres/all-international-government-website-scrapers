@@ -13,7 +13,7 @@ class PostsSpider(scrapy.Spider):
     linksFile = open('./links/all_new_zealand_links.txt', 'r')
 
     name = "new_zealand_posts"
-    start_urls = map(lambda link: 'https://www.gob.pe' + link if link.startswith(
+    start_urls = map(lambda link: 'https://www.health.govt.nz' + link if link.startswith(
         'http') == False else link, linksFile.read().split(','))
 
     def parse(self, response):
