@@ -29,7 +29,6 @@ elseif ($args -eq "peru".ToLower()) {
     scrapy crawl peru_links
     scrapy crawl peru_posts -o posts/peru_posts.json
 }elseif ($args -eq "new_zealand".ToLower()) {
-    scrapy crawl new_zealand_links
     scrapy crawl new_zealand_posts -o posts/new_zealand_posts.json
     Write-Host("*********************************************`nLinks to this Scraper were manually added!`n*********************************************")
 }
