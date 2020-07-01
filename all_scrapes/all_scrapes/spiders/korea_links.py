@@ -16,8 +16,8 @@ class LinksSpider(scrapy.Spider):
     def parse(self, response):
         maxPageString = response.css('.bt_count > strong::text').get()
         elementsWithLinks = response.css('.bl_link').getall()
-        links = list(map(lambda link: re.findall(r'onclick="(.*?);', link)
-                         [0].split(',')[-3].replace("'", ""), elementsWithLinks))
+        linksInfoArray = list(map(lambda link: '|'.join(re.findall(r'onclick="fn_tcm_boardView\((.*?)\);', link)[0].split(',')), elementsWithLinks))
+        links = list(map(lambda link: link.replace("'","").replace(' ',''),linksInfoArray))
         
         if 'pageIndex=1&' in response.url:
             self.maxPage = math.ceil(int(maxPageString)/10)
