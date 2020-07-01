@@ -32,6 +32,9 @@ elseif ($args -eq "peru".ToLower()) {
     scrapy crawl new_zealand_posts -o posts/new_zealand_posts.json
     Write-Host("*********************************************`nLinks to this Scraper were manually added!`n*********************************************")
 }
+elseif ($args -eq "korea".ToLower()) {
+    scrapy crawl korea_links
+    scrapy crawl korea_posts -o posts/korea_posts.json
 elseif ($args -eq "all".ToLower()) {
     .\powershell_script.ps1 cdc
     .\powershell_script.ps1 brazil
@@ -41,6 +44,7 @@ elseif ($args -eq "all".ToLower()) {
     .\powershell_script.ps1 germany
     .\powershell_script.ps1 peru
     .\powershell_script.ps1 new_zealand
+    .\powershell_script.ps1 korea
 }
 else {
     Write-Host("Uh-Oh! Sorry, that region does not have any script for it. `nCheck README for all available options.")
