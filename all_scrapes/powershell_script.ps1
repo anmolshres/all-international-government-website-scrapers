@@ -35,6 +35,7 @@ elseif ($args -eq "peru".ToLower()) {
 elseif ($args -eq "korea".ToLower()) {
     scrapy crawl korea_links
     scrapy crawl korea_posts -o posts/korea_posts.json
+}
 elseif ($args -eq "all".ToLower()) {
     .\powershell_script.ps1 cdc
     .\powershell_script.ps1 brazil
