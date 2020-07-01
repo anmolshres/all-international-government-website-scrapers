@@ -13,9 +13,9 @@ class LinksSpider(scrapy.Spider):
 
     def parse(self, response):
         allText = response.xpath("//script[contains(., 'window.initialData')]/text()").extract()[0]
-        linksToWrite = re.findall(r'href=\\\\\\\\\\\\\\"(.*?)\\\\\\\\\\\\\\"',allText)
+        linksToWrite = re.findall(r"href=\\\"(.*?)\\\"",allText)
         if 'sheet=1&' in response.url:
-            maxPageString = re.findall(r'"total_count\\\\\\":(.*?),',allText)[0]
+            maxPageString = re.findall(r'"total_count":(.*?),',allText)[0]
             self.maxPage = math.ceil(int(maxPageString) / 25)
         writeToFile(response,linksToWrite,str(self.maxPage))
         self.counter+=1
