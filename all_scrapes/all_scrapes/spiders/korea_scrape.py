@@ -6,9 +6,10 @@ from datetime import datetime
 
 
 class PostsSpider(scrapy.Spider):
-    name = "korea_posts"
+    linksFile = open('./links/all_korea_links.txt', 'r')
 
-    start_urls = returnStartUrls()
+    name = "korea_posts"
+    start_urls = linksFile.read().split(',')
 
     def parse(self, response):
         now = datetime.utcnow().replace(microsecond=0).isoformat()
@@ -39,15 +40,3 @@ class PostsSpider(scrapy.Spider):
             'language': language,
             'text': text
         }
-
-
-def returnStartUrls():
-    linksFile = open('./links/all_korea_links.txt', 'r')
-    linksToParse = linksFile.read().split(',')
-    linksToStart = []
-
-    for link in linksToParse:
-        splittedLink = link.split('|')
-        linksToStart.append(
-            f'http://ncov.mohw.go.kr{splittedLink[0]}?brdId={splittedLink[1]}&brdGubun={splittedLink[2]}&dataGubun=&ncvContSeq={splittedLink[3]}&contSeq={splittedLink[3]}&board_id={splittedLink[4]}&gubun={splittedLink[5]}')
-    return linksToStart

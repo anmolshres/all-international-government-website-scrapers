@@ -29,13 +29,20 @@ class LinksSpider(scrapy.Spider):
 
 
 def writeToFile(response, linksToWrite, pageMax):
+    linksToStart = []
+
+    for link in linksToWrite:
+        splittedLink = link.split('|')
+        linksToStart.append(
+            f'http://ncov.mohw.go.kr{splittedLink[0]}?brdId={splittedLink[1]}&brdGubun={splittedLink[2]}&dataGubun=&ncvContSeq={splittedLink[3]}&contSeq={splittedLink[3]}&board_id={splittedLink[4]}&gubun={splittedLink[5]}')
+    
     if 'pageIndex=1&' in response.url:
         open(filename, 'w').close()
         with open(filename, 'a') as myFile:
-            myFile.write(','.join(linksToWrite)+',')
+            myFile.write(','.join(linksToStart)+',')
     else:
         with open(filename, 'a') as myFile:
             if f'pageIndex={pageMax}&' in response.url:
-                myFile.write(','.join(linksToWrite))
+                myFile.write(','.join(linksToStart))
             else:
-                myFile.write(','.join(linksToWrite)+',')
+                myFile.write(','.join(linksToStart)+',')
