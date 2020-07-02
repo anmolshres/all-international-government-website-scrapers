@@ -15,6 +15,7 @@ While inside the virtualenv `cd` into the directory that contains `unix_script.s
 The scraped posts are saved in `posts` directory in the format `{title,source,published,url,scraped,classes,country,municipality,language,text}` for each post. The links to each update are saved in `links` directory.
 
 ## List of allowed shell arguments: 
+- __All__ (Run all scrapers)
 #### v0-dataset:
 - [CDC](https://www.cdc.gov/coronavirus/2019-ncov/whats-new-all.html)
 - [Brazil](https://www.saude.gov.br/noticias?filter-search=coronavirus&limit=0&filter-start_date=&filter-end_date=&filter_order=&filter_order_Dir=&limitstart=&task=)
@@ -27,8 +28,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 - [Korea](http://ncov.mohw.go.kr/tcmBoardList.do?pageIndex=1&brdId=&brdGubun=&board_id=&search_item=1&search_content=)
 #### v1-dataset (v0+others):
 - [Iran](http://irangov.ir/search?page=1&tid=286474&)
----
-- __All__ (Run all scrapers)
+
 
 **Note:** Since all the passed arguments are converted into lowercase, casing doesn't matter when you are passing it in the shell. For example: `.\powershell_script.ps1 cDc` would work the same way as `.\powershell_script.ps1 CDC`
 
