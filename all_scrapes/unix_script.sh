@@ -27,6 +27,9 @@ elif [ "${1,,}" == "new_zealand" ]; then
 elif [ "${1,,}" == "korea" ]; then
     scrapy crawl korea_links
     scrapy crawl korea_posts -o posts/korea_posts.json
+elif [ "${1,,}" == "iran" ]; then
+    scrapy crawl iran_links
+    scrapy crawl iran_posts -o posts/iran_posts.json
 elif [ "${1,,}" == "all" ]; then
     bash unix_script.sh cdc
     bash unix_script.sh brazil
@@ -37,6 +40,7 @@ elif [ "${1,,}" == "all" ]; then
     bash unix_script.sh peru
     bash unix_script.sh new_zealand
     bash unix_script.sh korea
+    bash unix_script.sh iran
 else
     printf "Uh-Oh! Sorry, that region does not have any script for it. \nCheck README for all available options.\n"
 fi
