@@ -15,7 +15,7 @@ While inside the virtualenv `cd` into the directory that contains `unix_script.s
 The scraped posts are saved in `posts` directory in the format `{title,source,published,url,scraped,classes,country,municipality,language,text}` for each post. The links to each update are saved in `links` directory.
 
 ## List of allowed shell arguments: 
-**v0-dataset:**
+#### v0-dataset:
 - [CDC](https://www.cdc.gov/coronavirus/2019-ncov/whats-new-all.html)
 - [Brazil](https://www.saude.gov.br/noticias?filter-search=coronavirus&limit=0&filter-start_date=&filter-end_date=&filter_order=&filter_order_Dir=&limitstart=&task=)
 - [Spain](https://www.mscbs.gob.es/profesionales/cargarNotas.do?time=1577833200000)
@@ -25,8 +25,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 - [Peru](https://www.gob.pe/busquedas?contenido[]=noticias&desde=01-01-2020&institucion[]=minsa&reason=sheet&sheet=1&term=coronavirus)
 - [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31) (Links to this were added manually) [Regex link](https://regex101.com/r/MxoFhB/1)
 - [Korea](http://ncov.mohw.go.kr/tcmBoardList.do?pageIndex=1&brdId=&brdGubun=&board_id=&search_item=1&search_content=)
-
-**v1-dataset (v0+others):**
+#### v1-dataset (v0+others):
 - __All__ (Run all scrapers)
 
 **Note:** Since all the passed arguments are converted into lowercase, casing doesn't matter when you are passing it in the shell. For example: `.\powershell_script.ps1 cDc` would work the same way as `.\powershell_script.ps1 CDC`
