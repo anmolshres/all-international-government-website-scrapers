@@ -25,7 +25,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 - [Peru](https://www.gob.pe/busquedas?contenido[]=noticias&desde=01-01-2020&institucion[]=minsa&reason=sheet&sheet=1&term=coronavirus)
 - [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31) (Links to this were added manually) [Regex link](https://regex101.com/r/MxoFhB/1)
 - [Korea](http://ncov.mohw.go.kr/tcmBoardList.do?pageIndex=1&brdId=&brdGubun=&board_id=&search_item=1&search_content=)
-**v1-dataset (v0+others):
+**v1-dataset (v0+others):**
 - __All__ (Run all scrapers)
 
 **Note:** Since all the passed arguments are converted into lowercase, casing doesn't matter when you are passing it in the shell. For example: `.\powershell_script.ps1 cDc` would work the same way as `.\powershell_script.ps1 CDC`
