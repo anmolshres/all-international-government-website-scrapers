@@ -20,6 +20,7 @@ class PostsSpider(scrapy.Spider):
         date = dateElement.replace('\r', '').replace(
             '\n', '').replace('  ', '')
         contentElement = response.css('.content_detail_body').get()
+        contentElement = response.css('.content_detail').get() if contentElement is None else contentElement
         converter = html2text.HTML2Text()
         converter.ignore_links = True
         updatedDateTime = dateparser.parse(date+' +0430')
