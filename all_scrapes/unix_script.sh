@@ -22,8 +22,8 @@ elif [ "${1,,}" == "peru" ]; then
     scrapy crawl peru_links
     scrapy crawl peru_posts -o posts/peru_posts.json
 elif [ "${1,,}" == "new_zealand" ]; then
+    python new_zealand_links/new_zealand_links.py
     scrapy crawl new_zealand_posts -o posts/new_zealand_posts.json
-    printf "*********************************************\nLinks to this Scraper were manually added!\n*********************************************"
 elif [ "${1,,}" == "korea" ]; then
     scrapy crawl korea_links
     scrapy crawl korea_posts -o posts/korea_posts.json
