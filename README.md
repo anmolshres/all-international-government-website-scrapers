@@ -5,6 +5,10 @@ This scraper uses scrapy,[CLD-2](https://pypi.org/project/cld2-cffi/), [datepars
 
 ## Steps before running scraper:
 - Create a virtualenv and run it. (This is slightly different for [Windows](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/) vs [Linux/Mac](https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv))
+- In order for selenium to work, you need to download [`chromewebdriver`](https://sites.google.com/a/chromium.org/chromedriver/downloads) and place it into the directory containing the shell scripts. Choose the version that matches the web browser you have. Note: You can always opt to use a different browser like Firefox. Just make sure to change the code accordingly in `new_zealand_links,py` to reflect that. Also, if you don't have a windows machine, you need to change this part in `new_zealand_links.py` to reflect that: 
+```
+CHROMEDRIVER_PATH = './chromedriver.exe'
+```
 - Run `pip install -r requirements.txt` from the inside the directory containing `requirements.txt` file while virtualenv is running to install all the dependencies
 ## Running the Scraper on Windows
 While inside the virtualenv `cd` into the directory that contains `powershell_script.ps1` and run `.\powershell_script.ps1` while passing allowed arguments, from powershell terminal to run the script. For example, running `.\powershell_script.ps1 cdc` will fetch covid-19 related posts from the CDC website. The list of allowed options can be found in the bottom of this document.
