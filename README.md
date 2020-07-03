@@ -24,7 +24,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 - [Italy](http://www.salute.gov.it/portale/nuovocoronavirus/archivioNotizieNuovoCoronavirus.jsp?lingua=italiano&menu=notizie&p=dalministero&area=nuovocoronavirus&notizie.page=0)
 - [Germany](https://www.bundesregierung.de/breg-de/suche/992800!search?f=1495774%3A1726012&page=0)
 - [Peru](https://www.gob.pe/busquedas?contenido[]=noticias&desde=01-01-2020&institucion[]=minsa&reason=sheet&sheet=1&term=coronavirus)
-- [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31) (Links to this were added manually) [Regex link](https://regex101.com/r/MxoFhB/1)
+- [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31) (Links to this were scraped with [Selenium](https://selenium-python.readthedocs.io/))
 - [Korea](http://ncov.mohw.go.kr/tcmBoardList.do?pageIndex=1&brdId=&brdGubun=&board_id=&search_item=1&search_content=)
 #### v1-dataset (v0+others):
 - [Iran](http://irangov.ir/search?page=1&tid=286474&)
