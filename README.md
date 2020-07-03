@@ -1,11 +1,11 @@
 # COVID-19 Updates Scraper (International)
-This web scraper uses [Scrapy](https://scrapy.org/) with Python to scrape all updates posted in select government websites regarding COVID-19
+This web scraper uses [Scrapy](https://scrapy.org/) with Python to scrape all updates posted in select government websites regarding COVID-19 ([selenium](https://selenium-python.readthedocs.io/) was used to scrape links to New Zealand's website)
 
 This scraper uses scrapy,[CLD-2](https://pypi.org/project/cld2-cffi/), [dateparser](https://pypi.org/project/dateparser/), and [html2text](https://pypi.org/project/html2text/) as dependencies. I am also using Python3 to create a [virtual environment](https://docs.python.org/3/library/venv.html#venv-def) to create an isoalted environment to run the scraper on.
 
 ## Steps before running scraper:
 - Create a virtualenv and run it. (This is slightly different for [Windows](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/) vs [Linux/Mac](https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv))
-- Run `pip install scrapy`,`pip install cld2-cffi`, `pip install dateparser`, and `pip install html2text` from the virtualenv to install all the dependencies
+- Run `pip install -r requirements.txt` from the inside the directory containing `requirements.txt` file while virtualenv is running to install all the dependencies
 ## Running the Scraper on Windows
 While inside the virtualenv `cd` into the directory that contains `powershell_script.ps1` and run `.\powershell_script.ps1` while passing allowed arguments, from powershell terminal to run the script. For example, running `.\powershell_script.ps1 cdc` will fetch covid-19 related posts from the CDC website. The list of allowed options can be found in the bottom of this document.
 ## Running the Scraper on Mac/Linux
@@ -24,7 +24,7 @@ The scraped posts are saved in `posts` directory in the format `{title,source,pu
 - [Italy](http://www.salute.gov.it/portale/nuovocoronavirus/archivioNotizieNuovoCoronavirus.jsp?lingua=italiano&menu=notizie&p=dalministero&area=nuovocoronavirus&notizie.page=0)
 - [Germany](https://www.bundesregierung.de/breg-de/suche/992800!search?f=1495774%3A1726012&page=0)
 - [Peru](https://www.gob.pe/busquedas?contenido[]=noticias&desde=01-01-2020&institucion[]=minsa&reason=sheet&sheet=1&term=coronavirus)
-- [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31) (Links to this were scraped with [Selenium](https://selenium-python.readthedocs.io/))
+- [New_Zealand](https://www.health.govt.nz/search/results/coronavirus?f%5B0%5D=im_field_news_type%3A31)
 - [Korea](http://ncov.mohw.go.kr/tcmBoardList.do?pageIndex=1&brdId=&brdGubun=&board_id=&search_item=1&search_content=)
 #### v1-dataset (v0+others):
 - [Iran](http://irangov.ir/search?page=1&tid=286474&)
