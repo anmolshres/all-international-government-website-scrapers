@@ -39,6 +39,9 @@ elseif ($args -eq "korea".ToLower()) {
 elseif ($args -eq "iran".ToLower()) {
     scrapy crawl iran_links
     scrapy crawl iran_posts -o posts/iran_posts.json
+}elseif ($args -eq "new_zealand".ToLower()) {
+    python .\vietnam_links\vietnam_links.py
+    scrapy crawl vietnam_posts -o posts/vietnam_posts.json
 }
 elseif ($args -eq "all".ToLower()) {
     .\powershell_script.ps1 cdc
@@ -51,6 +54,7 @@ elseif ($args -eq "all".ToLower()) {
     .\powershell_script.ps1 new_zealand
     .\powershell_script.ps1 korea
     .\powershell_script.ps1 iran
+    .\powershell_script.ps1 vietnam
 }
 else {
     Write-Host("Uh-Oh! Sorry, that region does not have any script for it. `nCheck README for all available options.")
