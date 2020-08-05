@@ -30,7 +30,7 @@ elif [ "${1,,}" == "korea" ]; then
 elif [ "${1,,}" == "iran" ]; then
     scrapy crawl iran_links
     scrapy crawl iran_posts -o posts/iran_posts.json
-elif [ "${1,,}" == "new_zealand" ]; then
+elif [ "${1,,}" == "vietnam" ]; then
     python vietnam_links/vietnam_links.py
     scrapy crawl vietnam_posts -o posts/vietnam_posts.json
 elif [ "${1,,}" == "all" ]; then

@@ -39,7 +39,7 @@ elseif ($args -eq "korea".ToLower()) {
 elseif ($args -eq "iran".ToLower()) {
     scrapy crawl iran_links
     scrapy crawl iran_posts -o posts/iran_posts.json
-}elseif ($args -eq "new_zealand".ToLower()) {
+}elseif ($args -eq "vietnam".ToLower()) {
     python .\vietnam_links\vietnam_links.py
     scrapy crawl vietnam_posts -o posts/vietnam_posts.json
 }
