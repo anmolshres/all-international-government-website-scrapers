@@ -32,6 +32,6 @@ six==1.15.0
 toml==0.10.1
 Twisted==20.3.0
 tzlocal==2.1
-urllib3==1.25.9
+urllib3==1.26.5
 w3lib==1.22.0
 zope.interface==5.1.0
