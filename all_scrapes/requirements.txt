@@ -30,7 +30,7 @@ selenium==3.141.0
 service-identity==18.1.0
 six==1.15.0
 toml==0.10.1
-Twisted==22.1.0
+Twisted==22.4.0
 tzlocal==2.1
 urllib3==1.26.5
 w3lib==1.22.0
